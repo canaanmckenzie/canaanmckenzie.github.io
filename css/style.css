@@ -85,9 +85,12 @@ ol > li{
 ul > li {
 	list-style-type: square;
 }
-a {
+a, a:hover, a:active, a:visited {
 	text-decoration: none;
 	color: #1a1;
+}
+a:hover, a:active{
+	color: #1c1;
 }
 *, *:before,*:after{
 	-webkit-box-sizing: inherit;
