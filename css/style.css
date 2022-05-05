@@ -92,6 +92,11 @@ a, a:hover, a:active, a:visited {
 a:hover, a:active{
 	color: #1c1;
 }
+hr {
+	background-color: #2f2f2f;
+	height: 1px;
+	border: 0;
+}
 *, *:before,*:after{
 	-webkit-box-sizing: inherit;
 	-moz-box-sizing: inherit;
