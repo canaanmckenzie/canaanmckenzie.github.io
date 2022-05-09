@@ -87,10 +87,10 @@ ul > li {
 }
 a, a:hover, a:active, a:visited {
 	text-decoration: none;
-	color: #ffa500;
+	color: #1a1;
 }
 a:hover, a:active{
-	color: #ffd580;
+	color: #1c1;
 }
 hr {
 	background-color: #2f2f2f;
