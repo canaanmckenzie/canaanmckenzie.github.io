@@ -83,7 +83,7 @@ ol > li{
 	list-style-type: decimal-leading-zero;
 }
 ul > li {
-	list-style-type: square;
+	list-style-type: none;
 }
 a, a:hover, a:active, a:visited {
 	text-decoration: none;
