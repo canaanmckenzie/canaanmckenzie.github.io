@@ -12,6 +12,7 @@ html{
 body{
 	background-color: #050505;
 	color: #eee;
+	animation: fade_in 750ms;
 	line-height: 1.1;
 	margin: 0;
 	padding: 10px 15px 30px 10px;
