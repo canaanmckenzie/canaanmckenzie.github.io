@@ -1,17 +1,6 @@
 * This style sheet contains all the used fonts in this site */
 /* Only provide light (200), regular (400) and bold (700) weight */
 
-/* Chinese */
-
-/* 清刻本
- * Used in Cook as body font
- */
-
-/* @font-face { */
-/*     font-family: "QingKeBen"; */
-/*     src: url("./misc/QingKeBen.ttf"); */
-/*     font-display: swap; */
-/* } */
 
 @font-face {
     font-family: "Source Han Serif SC";
