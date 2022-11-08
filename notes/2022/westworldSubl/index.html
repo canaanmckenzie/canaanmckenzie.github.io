@@ -22,12 +22,12 @@
 			</div>
 			<p>I often find myself moving between pre-built Sublime themes every few months, never fully satisfied with the colors or aesthetic. I thought it would be nice to write a quick blog to document making a custom one if anyone is interested in doing the same.</p>
 
-			<p>As much as Emacs and Vim are familiar to me, I like the bare bones of working in a simple text editor. Maybe I'll change in the future, but I've been programming professionally since 2014 and it's held up all this time.</p>
+			<p>As much as Emacs and Vim are familiar to me, I like the bare bones of working in a simple-ish text editor. Maybe this will change in the future, but I've been programming professionally since 2014 and it's held up all this time.</p>
 
-			<p>As of yesterday (10/6/2022) I heard that Westworld had been cancelled off its home on HBO. I found the first season of westworld a breath of fresh air, mostly because that's when I was building a 3D printer for tissue engineering while doing research at the University of Vermont. It hit quite close to home. So I thought I would take some time and build the closest approximation to the IDE shown briefly in the show.
+			<p>As of yesterday (10/6/2022) I heard that Westworld had been cancelled off its home on HBO. I found the first season of Westworld a breath of fresh air, mostly because that's when I was building a 3D printer for tissue engineering while doing research at the University of Vermont. It hit quite close to home. So I thought I would take some time and build the closest approximation to the IDE shown briefly in the show.
 			<p class="subtitle">UI Theme and Color Scheme</p>
 
-			<p>There are two sections of Sublime necessary to change, the workspace/code portion and the UI which includes the sidebar, tabs, widgets, etc. The current color scheme is in <em>.sublime-color-scheme</em> (JSON) while legacy support for <em>.tmTheme</em> (XML) files persists. The UI themes are JSON <em>.sublime-theme</em> files.</p>
+			<p>There are two sections of Sublime necessary to change, the workspace/code portion and the UI which includes the sidebar, tabs, widgets, etc. The current color scheme models are in the <em>.sublime-color-scheme</em> (JSON) file while legacy support for <em>.tmTheme</em> (XML) files persists. The UI themes are JSON <em>.sublime-theme</em> files.</p>
 
 			<p class="subtitle">Creating .sublime-color-scheme file</p>
 
@@ -37,8 +37,8 @@
 			<p><img src="./westworldIDEcolors.jpeg" alt=
 			"Westworld Code Example"></p>
 
-			<p>It's important to note that this is React, which gives a good starting point for editing the base theme to match the displayed color scheme. I'll be testing Python and Go (my daily drivers) later in this blog and adding appropriate scopes to the theme. There is an editor online for <em>.thTheme</em> files. However I didn't find it as extensible as modifying the downloaded color scheme JSON itself and monitoring the result in a test react file. Editing the JSON and saving the file yields immediate change and updates locally.</p>
-			<p>The simplest way to generate some hex values from the image itself was to send it to an online free jpeg to hex image color picker. I knew this wouldn't be a perfect solution, but it gave me somewhere to start. Breaking down the visual components roughly:
+			<p>It's important to note that this is React, which gives a good starting point for editing the base theme to match the displayed color scheme. I'll be testing Python and Go (my daily drivers) later in this blog and adding appropriate scopes to the theme. There is an editor online for <em>.thTheme</em> files. However I didn't find it as extensible as modifying the downloaded color scheme file itself and monitoring the result in a test react file. Editing the JSON and saving the file yields immediate change and updates locally.</p>
+			<p>The simplest way to generate some hex values from the image was to send it to an online free jpeg to hex image color picker. I knew this wouldn't be a perfect solution, but it gave me somewhere to start. Breaking down the visual components roughly:
 			</p>
 			<table>
 				<tr>
@@ -82,6 +82,10 @@
 				<tr>
 					<td>main workspace background</td>
 					<td>#000000</td>
+				</tr>
+				<tr>
+					<td>dark grey side panels</td>
+					<td>#0D1011</td>
 				</tr>
 			</table>
 
