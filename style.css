@@ -93,6 +93,7 @@ p {
 
 ul, ol {
     margin: 0;
+    list-style-type: none;
 }
 
 aside {
