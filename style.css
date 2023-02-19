@@ -1,0 +1,146 @@
+body {
+    background-color: #000;
+    color: #dddd;
+    display: flex;
+    flex-direction: column;
+    font-family: Times, serif;
+    font-size: 20px;
+    margin: auto;
+    max-width: 910px;
+    min-height: 98vh;
+    text-align: justify;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 10px;
+}
+
+header {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+time {
+    float: right;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #404040;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.35rem;
+}
+
+h5 {
+    font-size: 1.15rem;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0.1em;
+    margin-top: 1.5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline dotted 1px #666;
+    text-underline-offset: 3px;
+}
+
+    a:visited {
+        color: inherit;
+    }
+
+blockquote {
+    opacity: 0.9;
+    border-left: 4px solid #404040;
+    padding-left: 0.5em;
+    margin-left: 0.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+    p + p {
+        margin-top: 1em;
+    }
+
+ul, ol {
+    margin: 0;
+}
+
+aside {
+    border: 1px solid #8883;
+    color: #bbbb;
+    font-size: 0.9em;
+    margin: 1em auto;
+    padding: 0.5em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1em auto;
+}
+
+tr, td, th {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+}
+
+code {
+    font-size: 0.8em;
+}
+
+pre, :not(pre) > code {
+    padding: 0 2px;
+    background: #0a0a0a;
+    border: 1px dashed #333;
+}
+
+pre {
+    overflow: auto;
+    padding: 10px;
+}
+
+.post-list {
+    font-size: 1.3em;
+    text-align: left;
+}
+
+
+.yt-container {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.yt-video {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
