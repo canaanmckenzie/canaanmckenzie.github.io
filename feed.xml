@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-19T09:40:24-04:00</updated><id>/feed.xml</id><entry><title type="html">Chatgpt in the terminal</title><link href="/2023/03/19/ChatGPT-in-the-terminal.html" rel="alternate" type="text/html" title="Chatgpt in the terminal" /><published>2023-03-19T00:00:00-04:00</published><updated>2023-03-19T00:00:00-04:00</updated><id>/2023/03/19/ChatGPT%20in%20the%20terminal</id><content type="html" xml:base="/2023/03/19/ChatGPT-in-the-terminal.html"><![CDATA[<p>This is mostly so that I can pipe the results into Elixir at the moment.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-19T09:46:33-04:00</updated><id>/feed.xml</id><entry><title type="html">Chatgpt in the terminal</title><link href="/2023/03/19/ChatGPT-in-the-terminal.html" rel="alternate" type="text/html" title="Chatgpt in the terminal" /><published>2023-03-19T00:00:00-04:00</published><updated>2023-03-19T00:00:00-04:00</updated><id>/2023/03/19/ChatGPT%20in%20the%20terminal</id><content type="html" xml:base="/2023/03/19/ChatGPT-in-the-terminal.html"><![CDATA[<p>This is mostly so that I can pipe the results into Elixir at the moment.</p>
 
 <p>Currently OpenAI offers python or node bindings, this uses python to pull results directly to the terminal vs having to use their web interface. I’m more familiar with python’s libraries for analysis, so here we are.</p>
 
@@ -40,4 +40,113 @@
 <span class="c1">#gen response and print it
 </span><span class="n">response</span> <span class="o">=</span> <span class="nf">generate_response</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">model</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">temperature</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</code></pre></div></div>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[This is mostly so that I can pipe the results into Elixir at the moment.]]></summary></entry><entry><title type="html">Irregular library</title><link href="/2023/01/05/Irregular-Library.html" rel="alternate" type="text/html" title="Irregular library" /><published>2023-01-05T00:00:00-05:00</published><updated>2023-01-05T00:00:00-05:00</updated><id>/2023/01/05/Irregular%20Library</id><content type="html" xml:base="/2023/01/05/Irregular-Library.html"><![CDATA[<p>Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads. <a href="https://github.com/canaanmckenzie/random_bookshelf">Source</a>.</p>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads. Source.]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[This is mostly so that I can pipe the results into Elixir at the moment.]]></summary></entry><entry><title type="html">Irregular library</title><link href="/2023/01/05/Irregular-Library.html" rel="alternate" type="text/html" title="Irregular library" /><published>2023-01-05T00:00:00-05:00</published><updated>2023-01-05T00:00:00-05:00</updated><id>/2023/01/05/Irregular%20Library</id><content type="html" xml:base="/2023/01/05/Irregular-Library.html"><![CDATA[<p>Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads. <a href="https://github.com/canaanmckenzie/random_bookshelf">Source</a>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">urllib.request</span>
+<span class="kn">import</span> <span class="n">xml.etree.ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+<span class="kn">from</span> <span class="n">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">get_random_book</span><span class="p">():</span>
+    <span class="c1">#get today's date
+</span>    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="nf">today</span><span class="p">().</span><span class="nf">strftime</span><span class="p">(</span><span class="s">'%Y-%m-%d'</span><span class="p">)</span>
+
+    <span class="c1">#open text file
+</span>    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s">'daily_uploads/</span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s">.txt'</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"error: 'file_name' does not exist"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">None</span>
+    <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span><span class="s">'r'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">'utf'</span><span class="p">,</span><span class="n">errors</span><span class="o">=</span><span class="s">'ignore'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="nb">file</span><span class="p">.</span><span class="nf">readlines</span><span class="p">()</span>
+    
+    <span class="c1">#pick a random line from the file
+</span>    <span class="n">random_line</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="nf">choice</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+
+    <span class="c1">#parse the line to find the book number - need to find a more robust way to do this but should work
+</span>    <span class="n">book_number</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">parts</span> <span class="o">=</span> <span class="n">random_line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">strip</span><span class="p">().</span><span class="nf">rstrip</span><span class="p">(</span><span class="s">"'"</span><span class="p">)</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">strip</span><span class="p">()</span>
+        <span class="n">book_number</span> <span class="o">=</span> <span class="n">url</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">'/'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">book_number</span><span class="p">,</span> <span class="n">title</span>
+
+<span class="k">def</span> <span class="nf">retrieve_book</span><span class="p">(</span><span class="n">book_number</span><span class="p">,</span><span class="n">title</span><span class="p">):</span>
+    <span class="c1">#create an irregular_library folder
+</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="s">'irregular_library'</span><span class="p">):</span>
+        <span class="n">os</span><span class="p">.</span><span class="nf">makedirs</span><span class="p">(</span><span class="s">'irregular_library'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="sa">f</span><span class="s">'irregular_library/</span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s">'</span><span class="p">):</span>
+        <span class="n">os</span><span class="p">.</span><span class="nf">makedirs</span><span class="p">(</span><span class="sa">f</span><span class="s">'irregular_library/</span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="c1">#url to books text file
+</span>    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s">'https://www.gutenberg.org/cache/epub/</span><span class="si">{</span><span class="n">book_number</span><span class="si">}</span><span class="s">/pg</span><span class="si">{</span><span class="n">book_number</span><span class="si">}</span><span class="s">.txt'</span>
+    
+    <span class="c1">#error check book exists
+</span>    <span class="k">try</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">=</span> <span class="mi">200</span>
+    <span class="k">except</span> <span class="n">urllib</span><span class="p">.</span><span class="n">error</span><span class="p">.</span><span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Error: book with number </span><span class="si">{</span><span class="n">book_number</span><span class="si">}</span><span class="s"> does not exist as a text file"</span><span class="p">)</span>
+        <span class="k">return</span>
+    
+    <span class="c1">#download books text file and add it to the irregular_libray
+</span>    <span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="nf">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"irregular_library/</span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s">.txt"</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s">'w+'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span><span class="n">errors</span><span class="o">=</span><span class="s">'ignore'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+            <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">read</span><span class="p">().</span><span class="nf">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+    
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s"> has been saved"</span><span class="p">)</span>
+
+
+<span class="c1">#create a folder to store the daily uploads if it doesn't exist
+</span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="s">'daily_uploads'</span><span class="p">):</span>
+    <span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="s">'daily_uploads'</span><span class="p">)</span>
+
+<span class="c1">#download rss feed
+</span><span class="n">url</span> <span class="o">=</span> <span class="s">'https://www.gutenberg.org/cache/epub/feeds/today.rss'</span>
+<span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="nf">urlretrieve</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="s">'today.rss'</span><span class="p">)</span>
+
+<span class="c1">#parse the rss feed
+</span><span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s">'today.rss'</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="p">.</span><span class="nf">getroot</span><span class="p">()</span>
+
+<span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="p">.</span><span class="nf">today</span><span class="p">().</span><span class="nf">strftime</span><span class="p">(</span><span class="s">'%Y-%m-%d'</span><span class="p">);</span>
+
+<span class="c1">#open a text file to store the book title and urls
+</span><span class="n">file_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s">'daily_uploads/</span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s">.txt'</span>
+
+<span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s">'w+'</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span><span class="n">errors</span><span class="o">=</span><span class="s">'ignore'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="c1">#find &lt;items&gt;
+</span>    <span class="n">items</span> <span class="o">=</span> <span class="n">root</span><span class="p">.</span><span class="nf">findall</span><span class="p">(</span><span class="s">'channel/item'</span><span class="p">)</span>
+
+    <span class="c1">#loop through each upload
+</span>    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="s">'title'</span><span class="p">).</span><span class="n">text</span>
+        <span class="c1">#get the url of books plaintext file
+</span>        <span class="n">links</span> <span class="o">=</span> <span class="n">item</span><span class="p">.</span><span class="nf">findall</span><span class="p">(</span><span class="s">'link'</span><span class="p">)</span>
+        <span class="n">file_url</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">link</span><span class="p">.</span><span class="n">text</span><span class="p">:</span>
+                <span class="n">file_url</span> <span class="o">=</span> <span class="n">link</span><span class="p">.</span><span class="n">text</span>
+                <span class="k">break</span>
+        <span class="k">if</span> <span class="n">file_url</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"no URL found for '</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s">'"</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="c1">#write the title and URL to the text file
+</span>        <span class="nb">file</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s">'</span><span class="se">\t</span><span class="si">{</span><span class="n">file_url</span><span class="si">}</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="nb">file</span><span class="p">.</span><span class="nf">close</span><span class="p">()</span>
+<span class="n">os</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="s">'today.rss'</span><span class="p">)</span>
+
+<span class="c1">#get random book number from text file - change this to get book txt file from project Gutenberg
+</span><span class="n">book_number</span><span class="p">,</span> <span class="n">title</span> <span class="o">=</span> <span class="nf">get_random_book</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">book_number</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Book of the day for </span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s"> is </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s">: </span><span class="si">{</span><span class="n">book_number</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="nf">retrieve_book</span><span class="p">(</span><span class="n">book_number</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Error getting book number"</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads. Source.]]></summary></entry></feed>
