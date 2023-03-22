@@ -24,11 +24,11 @@ body {
 }
 
 a {
-  color: #3273dc;
+  color: #000;
 }
 
 a:visited {
-  color: #8b6fcb;
+  color: #888888;
 }
 
 .navigation-header {
