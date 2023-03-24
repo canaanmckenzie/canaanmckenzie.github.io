@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scaled=1.0"/>
+        <title>Adding LaTeX notation to Jekyll | Canaan McKenzie</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="icon" href="/assets/images/favicon.ico">
+        <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+        <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Adding LaTeX notation to Jekyll</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Adding LaTeX notation to Jekyll" />
+<meta name="author" content="Canaan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Note: This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation here." />
+<meta property="og:description" content="Note: This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation here." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-24T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Adding LaTeX notation to Jekyll" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Canaan"},"dateModified":"2023-03-24T00:00:00-04:00","datePublished":"2023-03-24T00:00:00-04:00","description":"Note: This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation here.","headline":"Adding LaTeX notation to Jekyll","mainEntityOfPage":{"@type":"WebPage","@id":"/2023/03/24/Math-notation-in-Jekyll.html"},"url":"/2023/03/24/Math-notation-in-Jekyll.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+        
+        <script type="text/javascript" async src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+        
+    </head>
+    <header>
+        <header class="navigation-header">
+    <a class = "logo" href="/"><h1>@ Canaan McKenzie</h1></a>
+    <nav>
+        
+            <a href="https://www.github.com/canaanmckenzie">Github</a>
+        
+            <a href="/feed.xml">RSS</a>
+        
+    </nav>    
+</header>
+    </header>
+    <body>
+        <main class="article-page">
+    <content>
+        <header>
+            <h1>Adding LaTeX notation to Jekyll</h1>
+            <h6>2023 03 24</h6>
+        </header>
+        <article>
+            <p><em>Note:</em> This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation <a href="https://www.mathjax.org/">here</a>.</p>
+
+<p>In the <code class="language-plaintext highlighter-rouge">_config.yml</code> make sure that you are using <em>kramdown</em> (the default) for your markdown parser. Both maruku and redcarpet are not supported by Github Pages.</p>
+
+<p>Depending on your theme you might have an <code class="language-plaintext highlighter-rouge">_include</code> folder with a <code class="language-plaintext highlighter-rouge">script.html</code> or <code class="language-plaintext highlighter-rouge">head.html</code> where you can add the code. To allow for calls on pages that use the <code class="language-plaintext highlighter-rouge">default.html</code> from the <code class="language-plaintext highlighter-rouge">_layouts</code> folder, add this code to the <code class="language-plaintext highlighter-rouge">default.html</code> in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> section.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% if page.usemathjax %}
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">async</span> <span class="na">src=</span><span class="s">'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'</span><span class="nt">&gt;&lt;/script&gt;</span>
+{% endif %}
+
+</code></pre></div></div>
+
+<p>For any page’s markdown file where you want to use MathJax, include <code class="language-plaintext highlighter-rouge">usermathjax: true</code> in the YAML front matter.</p>
+
+<p>By default the <em>tex2jax</em> preprocessor defines the LaTeX math delimiters, which are <code class="language-plaintext highlighter-rouge">\\(...\\)</code> for inline expressions and <code class="language-plaintext highlighter-rouge">\\[...\\]</code> for displayed expressions. The TeX delimiters <code class="language-plaintext highlighter-rouge">$$...$$</code> are also defined for displayed expressions, but not the inline delimters <code class="language-plaintext highlighter-rouge">$...$</code>.</p>
+
+<p>Example displaying the parametric equations for the curve which defines the trefoil knot in TeX notation</p>
+
+<p><code class="language-plaintext highlighter-rouge">$$x = sint + 2sin2t$$</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">$$y = cost - 2cos2t$$</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">$$z = -sin3t$$</code></p>
+
+\[x = sint + 2sin2t\]
+
+\[y = cost - 2cos2t\]
+
+\[z = -sin3t\]
+
+<p>Expressions like \(cos(x^2)\) are rendered inline with <code class="language-plaintext highlighter-rouge">\\(cos(x^2)\\)</code> while using <code class="language-plaintext highlighter-rouge">\mathbf</code>to turn on boldface typestyle with <code class="language-plaintext highlighter-rouge">\mathsf</code> for sans serif:</p>
+
+<p><code class="language-plaintext highlighter-rouge">\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}\\]</code></p>
+
+<p>yields</p>
+
+<p>\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}}\]</p>
+
+<p>Subscripts are common and using an underscore will display them properly. <code class="language-plaintext highlighter-rouge">\mathbf{X}_{n,p}</code>.</p>
+
+\[\mathbf{X}_{n,p} = \Omega\]
+
+    </content>
+</main>
+    </body>
+</html>

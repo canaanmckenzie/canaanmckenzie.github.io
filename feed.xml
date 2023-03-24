@@ -1,8 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-21T23:00:57-04:00</updated><id>/feed.xml</id><entry><title type="html">Bard vs chatgpt, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs chatgpt, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-24T13:38:30-04:00</updated><id>/feed.xml</id><entry><title type="html">Adding LaTeX notation to Jekyll</title><link href="/2023/03/24/Math-notation-in-Jekyll.html" rel="alternate" type="text/html" title="Adding LaTeX notation to Jekyll" /><published>2023-03-24T00:00:00-04:00</published><updated>2023-03-24T00:00:00-04:00</updated><id>/2023/03/24/Math%20notation%20in%20Jekyll</id><content type="html" xml:base="/2023/03/24/Math-notation-in-Jekyll.html"><![CDATA[<p><em>Note:</em> This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation <a href="https://www.mathjax.org/">here</a>.</p>
 
-<p><img src="../../../assets/images/openai_chinese_title.jpg" alt="ChatGPT's Auto-generated query header" class="img" /></p>
+<p>In the <code class="language-plaintext highlighter-rouge">_config.yml</code> make sure that you are using <em>kramdown</em> (the default) for your markdown parser. Both maruku and redcarpet are not supported by Github Pages.</p>
 
-<p>And it’s impressive actually, I translated the title with google, and it was pretty much as accurate as I would expect google translate to be. I don’t have the direct translation because (the history is gone and I imagine this will be cleaned up), but it’s basically referring to the question I was asking which was seeing how it would interpret the rules to the library of babel.<a href="https://en.wikipedia.org/wiki/The_Library_of_Babel">Wikipedia entry for anyone curious</a>. It actually got that wrong, but maybe that will be a later post. Although my question was in english, so what compelled it to then take the english description and then translate it to chinese is beyond me.</p>
+<p>Depending on your theme you might have an <code class="language-plaintext highlighter-rouge">_include</code> folder with a <code class="language-plaintext highlighter-rouge">script.html</code> or <code class="language-plaintext highlighter-rouge">head.html</code> where you can add the code. To allow for calls on pages that use the <code class="language-plaintext highlighter-rouge">default.html</code> from the <code class="language-plaintext highlighter-rouge">_layouts</code> folder, add this code to the <code class="language-plaintext highlighter-rouge">default.html</code> in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;&lt;/head&gt;</code> section.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% if page.usemathjax %}
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">async</span> <span class="na">src=</span><span class="s">'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'</span><span class="nt">&gt;&lt;/script&gt;</span>
+{% endif %}
+
+</code></pre></div></div>
+
+<p>For any page’s markdown file where you want to use MathJax, include <code class="language-plaintext highlighter-rouge">usermathjax: true</code> in the YAML front matter.</p>
+
+<p>By default the <em>tex2jax</em> preprocessor defines the LaTeX math delimiters, which are <code class="language-plaintext highlighter-rouge">\\(...\\)</code> for inline expressions and <code class="language-plaintext highlighter-rouge">\\[...\\]</code> for displayed expressions. The TeX delimiters <code class="language-plaintext highlighter-rouge">$$...$$</code> are also defined for displayed expressions, but not the inline delimters <code class="language-plaintext highlighter-rouge">$...$</code>.</p>
+
+<p>Example displaying the parametric equations for the curve which defines the trefoil knot in TeX notation</p>
+
+<p><code class="language-plaintext highlighter-rouge">$$x = sint + 2sin2t$$</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">$$y = cost - 2cos2t$$</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">$$z = -sin3t$$</code></p>
+
+\[x = sint + 2sin2t\]
+
+\[y = cost - 2cos2t\]
+
+\[z = -sin3t\]
+
+<p>Expressions like \(cos(x^2)\) are rendered inline with <code class="language-plaintext highlighter-rouge">\\(cos(x^2)\\)</code> while using <code class="language-plaintext highlighter-rouge">\mathbf</code>to turn on boldface typestyle with <code class="language-plaintext highlighter-rouge">\mathsf</code> for sans serif:</p>
+
+<p><code class="language-plaintext highlighter-rouge">\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}\\]</code></p>
+
+<p>yields</p>
+
+<p>\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}}\]</p>
+
+<p>Subscripts are common and using an underscore will display them properly. <code class="language-plaintext highlighter-rouge">\mathbf{X}_{n,p}</code>.</p>
+
+\[\mathbf{X}_{n,p} = \Omega\]]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Note: This has been proven to work on Github Pages using Jekyll. I’m using a custom theme so I can’t say for sure that there won’t be a conflict if you are using a pre-built theme. You can find the official MathJax documentation here.]]></summary></entry><entry><title type="html">Bard vs ChatGPT, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs ChatGPT, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
+
+<p><img src="../../../assets/images/bardvschatgpt/openai_chinese_title.jpg" alt="ChatGPT's Auto-generated query header" class="img" /></p>
+
+<p>And it’s impressive actually, I translated the title with google, and it was pretty much as accurate as I would expect google translate to be. I don’t have the direct translation because (the history is gone and I imagine this will be cleaned up), but it’s basically referring to the question I was asking which was seeing how it would interpret the rules to the library of babel. <a href="https://en.wikipedia.org/wiki/The_Library_of_Babel">Wikipedia entry for anyone curious</a>. It actually got that wrong, but maybe that will be a later post. Although my question was in english, so what compelled it to then take the english description and then translate it to chinese is beyond me.</p>
 
 <p>Anyway, fast forward to my access to Google’s bard, I had this thought as I was going for a walk about rolling a dice to decide a particular problem. The problem was pretty simple, something a manager asked me once.</p>
 
@@ -13,25 +54,25 @@
 <p>Immediately I thought that it was obvious I should pick numbers on opposite sides of the dice, this was a hunch, and I was on the move, so I wasn’t going to sit down and try to solve it myself. But it got me thinking about my recent access to Bard and I thought this would be an interesting question to test with the LLMs I have access to. I haven’t asked alpaca yet, but my local 7B model is a bit slow and jankily implemented, maybe later. Here’s the query (as open ended as I could, I didn’t want to try and force an answer).</p>
 
 <h4 id="query">Query:</h4>
-<p><img src="../../../assets/images/diceprobquery.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
+<p><img src="../../../assets/images/bardvschatgpt/diceprobquery.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
 
 <h4 id="here-is-bards-response">Here is Bard’s response:</h4>
-<p><img src="../../../assets/images/googlebarddiceprob.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
+<p><img src="../../../assets/images/bardvschatgpt/googlebarddiceprob.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
 
 <p>Hey! It agreed with my preconceived notions! Alright well I’m just using Bard from here on out. Why bother with a second opinion? I was right and I have a google certified AI to back me up.</p>
 
 <p>Two things stood out to me, one, it referenced a paper and it seemed to be hedging against actually being able to predict a dice throw. Fair enough, my question was vague, although I imagine if I stumbled through this with a person they would sort of grasp what I was getting at, and it agree. But the paper was big, although as I’ll show later there might be some confusion on it’s end.</p>
 
 <h4 id="here-is-chatgpts-response-query-is-the-same">Here is ChatGPT’s response (query is the same):</h4>
-<p><img src="../../../assets/images/chatgptdiceprob.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
+<p><img src="../../../assets/images/bardvschatgpt/chatgptdiceprob.png" alt="ChatGPT's Auto-generated query header" class="img" /></p>
 
 <p>Interesting… So initially I think it’s agreeing, it insinuated that the opposite pairs would have an equal chance of landing face up, ok, so that seems to be in line with what Bard said. However it then goes on to say that sequential or opposite numbers should have no effect. So either this generalizes the variation or ignores the sequential part (maybe because I ended the query with the opposite numbers so as it generated it’s response it was picking up as a continuation of what my query was “saying”). I’m not sure how I feel about it suggesting a different approach like using a random number generator. It’s helpful because it’s a solution, and a tried and tested one in most cases, but it’s not within the query parameters.</p>
 
 <p>So initial thoughts, good on Bard for providing a link to the paper unprovoked, that shows some real initiative for anyone wanting to find some references (I’ll read it tonight) <a href="https://www.researchgate.net/publication/236272533_Synchronization_of_clocks">The paper Bard linked</a>. However from the abstract, <em>“We consider the synchonization of two clocks which are accurate (show the same time) but have pendula with different masses.”</em> …I’m not sure I can say for sure if that’s going to help me with my dice problem. On to part two, but later, I’ve got some Haskell to write.</p>
 
-<p>Postscript: I asked my alpaca (7B) model the same query, here is it’s response: <em>The most balanced distribution is by having one side face up and another facing down. THis would ensure an equal probability for each number appearing once a game has been played, regardless of how many times you rolled it (in terms of physics)</em> so not great.</p>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)]]></summary></entry><entry><title type="html">Chatgpt in the terminal</title><link href="/2023/03/19/ChatGPT-in-the-terminal.html" rel="alternate" type="text/html" title="Chatgpt in the terminal" /><published>2023-03-19T00:00:00-04:00</published><updated>2023-03-19T00:00:00-04:00</updated><id>/2023/03/19/ChatGPT%20in%20the%20terminal</id><content type="html" xml:base="/2023/03/19/ChatGPT-in-the-terminal.html"><![CDATA[<p>Currently OpenAI offers python or node bindings, this uses python to pull results directly to the terminal vs having to use their web interface. I’m more familiar with python’s libraries for analysis, so here we are.</p>
+<p>Postscript: I asked my alpaca (7B) model the same query, here is it’s response: <em>The most balanced distribution is by having one side face up and another facing down. THis would ensure an equal probability for each number appearing once a game has been played, regardless of how many times you rolled it (in terms of physics)</em> so not great.</p>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)]]></summary></entry><entry><title type="html">ChatGPT in the terminal</title><link href="/2023/03/19/ChatGPT-in-the-terminal.html" rel="alternate" type="text/html" title="ChatGPT in the terminal" /><published>2023-03-19T00:00:00-04:00</published><updated>2023-03-19T00:00:00-04:00</updated><id>/2023/03/19/ChatGPT%20in%20the%20terminal</id><content type="html" xml:base="/2023/03/19/ChatGPT-in-the-terminal.html"><![CDATA[<p>Currently OpenAI offers python or node bindings, this uses python to pull results directly to the terminal vs having to use their web interface. I’m more familiar with python’s libraries for analysis, so here we are.</p>
 
-<p>Be advised that you need a valid api key to access their models which involves giving them money.<a href="https://github.com/canaanmckenzie/ChatGPT_cmd">Source</a>.</p>
+<p>Be advised that you need a valid api key to access their models. <a href="https://github.com/canaanmckenzie/ChatGPT_cmd">Source</a>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">openai</span>
 <span class="kn">import</span> <span class="n">argparse</span>
@@ -69,7 +110,7 @@
 <span class="c1">#gen response and print it
 </span><span class="n">response</span> <span class="o">=</span> <span class="nf">generate_response</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">model</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">temperature</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-</code></pre></div></div>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Currently OpenAI offers python or node bindings, this uses python to pull results directly to the terminal vs having to use their web interface. I’m more familiar with python’s libraries for analysis, so here we are.]]></summary></entry><entry><title type="html">Irregular library</title><link href="/2023/01/05/Irregular-Library.html" rel="alternate" type="text/html" title="Irregular library" /><published>2023-01-05T00:00:00-05:00</published><updated>2023-01-05T00:00:00-05:00</updated><id>/2023/01/05/Irregular%20Library</id><content type="html" xml:base="/2023/01/05/Irregular-Library.html"><![CDATA[<p>Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads.<a href="https://github.com/canaanmckenzie/random_bookshelf">Source</a>.</p>
+</code></pre></div></div>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Currently OpenAI offers python or node bindings, this uses python to pull results directly to the terminal vs having to use their web interface. I’m more familiar with python’s libraries for analysis, so here we are.]]></summary></entry><entry><title type="html">Irregular Library</title><link href="/2023/01/05/Irregular-Library.html" rel="alternate" type="text/html" title="Irregular Library" /><published>2023-01-05T00:00:00-05:00</published><updated>2023-01-05T00:00:00-05:00</updated><id>/2023/01/05/Irregular%20Library</id><content type="html" xml:base="/2023/01/05/Irregular-Library.html"><![CDATA[<p>Python script for generating a randomly selected libary from Project Gutenberg’s daily uploads.<a href="https://github.com/canaanmckenzie/random_bookshelf">Source</a>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
 <span class="kn">import</span> <span class="n">urllib.request</span>
