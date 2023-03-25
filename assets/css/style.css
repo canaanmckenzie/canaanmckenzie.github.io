@@ -85,11 +85,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
 
-.tablelines th, .tablelines td, table {
+table {
+  border-collapse: collapse;
+  border: 3px solid #000;
+  max-width: 100%;
+}
+
+.tablelines th, .tablelines td {
   border: 1px solid black;
   padding: 8px;
-  border-collapse: collapse;
-  margin: 0 auto;
 }
 
 /*code*/
