@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-24T21:30:30-04:00</updated><id>/feed.xml</id><entry><title type="html">Bard vs ChatGPT, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs ChatGPT, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-24T22:41:28-04:00</updated><id>/feed.xml</id><entry><title type="html">Bard vs ChatGPT, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs ChatGPT, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
 
 <p><img src="../../../assets/images/bardvschatgpt/openai_chinese_title.jpg" alt="ChatGPT's Auto-generated query header" class="img" /></p>
 
@@ -223,7 +223,7 @@
   <thead>
     <tr>
       <th>Symbols       </th>
-      <th style="text-align: left">Semantics  </th>
+      <th style="text-align: left">Semantics            </th>
       <th style="text-align: left">LaTeX</th>
     </tr>
   </thead>
@@ -591,4 +591,39 @@
       <td style="text-align: left">\mathbf{A}^{\rm T}</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Symbols        Semantics   LaTeX a,b (known) variable or element of a set   c constant, speed of light   e Euler’s number   \(\pi\) constant \(\pi\) \pi i general integer, subscript or superscript, imaginary unit   j,k,l general integer, subscript or superscript   n,m general natural number, total number   p general prime number, general probability   q general prime number   \(\varepsilon\) positive infinitesimal quantitiy \varepsilon x,y (unknown) variable or element of a set; coordinate   z,w general complex number; coordinate   \(\vert x \vert, \vert y \vert\) absolute value \vert \(\bar{z}\) complex conjugate \bar{z} \(\Re{z}\) real part \Re{z} \(\Im{z}\) imaginary part \Im{z} \(\mathcal{T}\) topological space \mathcal{T} A,B (known) set, event   X,Y (uknown) set, random variable   \(\mathcal{X}\),\(\mathcal{Y}\) set of special structure, space \mathcal{X} S,\(\Omega\) class of sets, sample space \Omega U universal set   \(A^\complement\),\(\complement _uA\),\(\bar A\) complement of set A^\complement, \complement _uA, \bar A \(\varnothing\) empty set \varnothing \(\mathcal{P}(S)\),\(2^S\) power set \mathcal{P}(S) \(\in\) is member of \in \(\notin\) is not a member of \notin \(\ni\) owns (has member) \ni \(\subset\) is a proper subset of \subset \(\subseteq\) is a subset of \subseteq \(\supset\) is a proper superset of \supset \(\supseteq\) is a superset of \supseteq \(\cup\) set union \cup \(\cap\) set interseection \cap \(\mathbb{N}\) set of natural numbers \mathbb{N} \(\mathbb{Z}\) set of integers \mathbb{Z} \(\mathbb{Z}^+\) set of positive numbers \mathbb{Z}^+ \(\mathbb{R}\) set of real numbers \mathbb{R} \(\mathbb{R}^n\) n-dimensional real coordinate space \mathbb{R}^n \(\mathbb{C}\) set of complex numbers \mathbb{C} \(\mathbb{C}^n\) n-dimensional complex coordinate space \mathbb{C}^n \(\mathbf{A}\),\(\mathbf{B}\),\(\mathbf{X}\),\(\mathbf{Y}\) matrix \mathbf{A} \(\boldsymbol{a}\),\(\boldsymbol{b}\),\(\boldsymbol{x}\),\(\boldsymbol{y}\) vector \boldsymbol{a} \(\boldsymbol{e}\),\(\boldsymbol{i}\),\(\boldsymbol{j}\),\(\boldsymbol{k}\) unit vector \boldsymbol{e} \(\lambda\) eigenvalue \lambda \(\boldsymbol{v}\) eigenvector   \(\vert\vert a \vert\vert \),\(\vert\vert A \vert\vert\) norm   (a,b) inner product of vectors   \(I _n\) identity matrix of size n   diag\((a _1,…,a _n)\) diagnol matrix of size n   \(\delta_{ij} = \begin{cases} 1, &amp; \text{if }i=j \\ 0,&amp; \text{if } i\neq j \end{cases}\) Kronecker delta \delta_{ij} = \begin{cases} 1, &amp; \\ \text{if }i=j 0,&amp; \text{if } i\neq j \end{cases} \(\mathbf{A}^{\rm T}\) transpose of matrix \mathbf{A}^{\rm T}]]></summary></entry></feed>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbf{A}^{-1}\)</em></td>
+      <td style="text-align: left">inverse of matrix</td>
+      <td style="text-align: left">\mathbf{A}^{-1}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>rank<em>\((\mathbf{A})\)</em></td>
+      <td style="text-align: left">rank of matrix</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>det<em>\((\mathbf{A})\)</em></td>
+      <td style="text-align: left">determinant of matrix</td>
+      <td style="text-align: left">\det(\mathbf{A})</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>f,g,h</em></td>
+      <td style="text-align: left">function or mapping</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\varphi\)</em></td>
+      <td style="text-align: left">function or mapping with special property</td>
+      <td style="text-align: left">\varphi</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Canaan</name></author><summary type="html"><![CDATA[Symbols        Semantics             LaTeX a,b (known) variable or element of a set   c constant, speed of light   e Euler’s number   \(\pi\) constant \(\pi\) \pi i general integer, subscript or superscript, imaginary unit   j,k,l general integer, subscript or superscript   n,m general natural number, total number   p general prime number, general probability   q general prime number   \(\varepsilon\) positive infinitesimal quantitiy \varepsilon x,y (unknown) variable or element of a set; coordinate   z,w general complex number; coordinate   \(\vert x \vert, \vert y \vert\) absolute value \vert \(\bar{z}\) complex conjugate \bar{z} \(\Re{z}\) real part \Re{z} \(\Im{z}\) imaginary part \Im{z} \(\mathcal{T}\) topological space \mathcal{T} A,B (known) set, event   X,Y (uknown) set, random variable   \(\mathcal{X}\),\(\mathcal{Y}\) set of special structure, space \mathcal{X} S,\(\Omega\) class of sets, sample space \Omega U universal set   \(A^\complement\),\(\complement _uA\),\(\bar A\) complement of set A^\complement, \complement _uA, \bar A \(\varnothing\) empty set \varnothing \(\mathcal{P}(S)\),\(2^S\) power set \mathcal{P}(S) \(\in\) is member of \in \(\notin\) is not a member of \notin \(\ni\) owns (has member) \ni \(\subset\) is a proper subset of \subset \(\subseteq\) is a subset of \subseteq \(\supset\) is a proper superset of \supset \(\supseteq\) is a superset of \supseteq \(\cup\) set union \cup \(\cap\) set interseection \cap \(\mathbb{N}\) set of natural numbers \mathbb{N} \(\mathbb{Z}\) set of integers \mathbb{Z} \(\mathbb{Z}^+\) set of positive numbers \mathbb{Z}^+ \(\mathbb{R}\) set of real numbers \mathbb{R} \(\mathbb{R}^n\) n-dimensional real coordinate space \mathbb{R}^n \(\mathbb{C}\) set of complex numbers \mathbb{C} \(\mathbb{C}^n\) n-dimensional complex coordinate space \mathbb{C}^n \(\mathbf{A}\),\(\mathbf{B}\),\(\mathbf{X}\),\(\mathbf{Y}\) matrix \mathbf{A} \(\boldsymbol{a}\),\(\boldsymbol{b}\),\(\boldsymbol{x}\),\(\boldsymbol{y}\) vector \boldsymbol{a} \(\boldsymbol{e}\),\(\boldsymbol{i}\),\(\boldsymbol{j}\),\(\boldsymbol{k}\) unit vector \boldsymbol{e} \(\lambda\) eigenvalue \lambda \(\boldsymbol{v}\) eigenvector   \(\vert\vert a \vert\vert \),\(\vert\vert A \vert\vert\) norm   (a,b) inner product of vectors   \(I _n\) identity matrix of size n   diag\((a _1,…,a _n)\) diagnol matrix of size n   \(\delta_{ij} = \begin{cases} 1, &amp; \text{if }i=j \\ 0,&amp; \text{if } i\neq j \end{cases}\) Kronecker delta \delta_{ij} = \begin{cases} 1, &amp; \\ \text{if }i=j 0,&amp; \text{if } i\neq j \end{cases} \(\mathbf{A}^{\rm T}\) transpose of matrix \mathbf{A}^{\rm T} \(\mathbf{A}^{-1}\) inverse of matrix \mathbf{A}^{-1} rank\((\mathbf{A})\) rank of matrix   det\((\mathbf{A})\) determinant of matrix \det(\mathbf{A}) f,g,h function or mapping   \(\varphi\) function or mapping with special property \varphi]]></summary></entry></feed>

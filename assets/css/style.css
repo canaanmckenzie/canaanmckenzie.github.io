@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid black;
   padding: 8px;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
 /*code*/
