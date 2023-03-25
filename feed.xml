@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-25T07:53:26-04:00</updated><id>/feed.xml</id><entry><title type="html">Bard vs ChatGPT, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs ChatGPT, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2023-03-25T08:05:21-04:00</updated><id>/feed.xml</id><entry><title type="html">Bard vs ChatGPT, the dice problem part one</title><link href="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html" rel="alternate" type="text/html" title="Bard vs ChatGPT, the dice problem part one" /><published>2023-03-21T00:00:00-04:00</published><updated>2023-03-21T00:00:00-04:00</updated><id>/2023/03/21/Bard%20vs%20ChatGPT,%20the%20dice%20problem%20part%20one</id><content type="html" xml:base="/2023/03/21/Bard-vs-ChatGPT,-the-dice-problem-part-one.html"><![CDATA[<p>Rather quickly I was able to get access to Google’s Bard (their LLM) so the first thing I decided to do was put it up against ChatGPT (the browser edition freely available). So right off the bat I noticed it hadn’t translated the description of my english query into chinese (progress?) (..I’m giving OpenAI a break because they’ve been experiencing difficulties and at the time of writing this entry I still don’t have the history of previous chats back.)</p>
 
 <p><img src="../../../assets/images/bardvschatgpt/openai_chinese_title.jpg" alt="ChatGPT's Auto-generated query header" class="img" /></p>
 
@@ -195,7 +195,7 @@
 
 <p>By default the <em>tex2jax</em> preprocessor defines the LaTeX math delimiters, which are <code class="language-plaintext highlighter-rouge">\\(...\\)</code> for inline expressions and <code class="language-plaintext highlighter-rouge">\\[...\\]</code> for displayed expressions. The TeX delimiters <code class="language-plaintext highlighter-rouge">$$...$$</code> are also defined for displayed expressions, but not the inline delimters <code class="language-plaintext highlighter-rouge">$...$</code>.</p>
 
-<p>Example displaying the parametric equations for the curve which defines the trefoil knot in TeX notation</p>
+<p>Here I have the curve for a trefoil knot in TeX notation</p>
 
 <p><code class="language-plaintext highlighter-rouge">$$x = sint + 2sin2t$$</code></p>
 
@@ -203,13 +203,15 @@
 
 <p><code class="language-plaintext highlighter-rouge">$$z = -sin3t$$</code></p>
 
+<p>formatted properly as:</p>
+
 \[x = sint + 2sin2t\]
 
 \[y = cost - 2cos2t\]
 
 \[z = -sin3t\]
 
-<p>Expressions like \(cos(x^2)\) are rendered inline with <code class="language-plaintext highlighter-rouge">\\(cos(x^2)\\)</code> while using <code class="language-plaintext highlighter-rouge">\mathbf</code>to turn on boldface typestyle with <code class="language-plaintext highlighter-rouge">\mathsf</code> for sans serif:</p>
+<p>Expressions like \(cos(x^2)\) are rendered inline with <code class="language-plaintext highlighter-rouge">\\(cos(x^2)\\)</code>. Operators like <code class="language-plaintext highlighter-rouge">\mathbf</code> and <code class="language-plaintext highlighter-rouge">\mathsf</code> can be used to define the typestyle corresponding to the proper expression notation within your field.</p>
 
 <p><code class="language-plaintext highlighter-rouge">\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}\\]</code></p>
 
