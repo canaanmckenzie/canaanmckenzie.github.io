@@ -95,6 +95,8 @@ table {
 .tablelines th, .tablelines td {
   border: 1px solid black;
   padding-left: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*code*/
