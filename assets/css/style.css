@@ -88,13 +88,13 @@ h1, h2, h3, h4, h5, h6 {
 table {
   border-collapse: collapse;
   border: 3px solid #000;
-  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tablelines th, .tablelines td {
   border: 1px solid black;
   padding-left: 8px;
-  padding-right: 8px;
 }
 
 /*code*/
