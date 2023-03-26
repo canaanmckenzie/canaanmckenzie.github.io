@@ -354,6 +354,7 @@ figure.fullwidth figcaption {
 
 img {
   max-width: 100%;
+  border: 3px solid black;
 }
 
 .sidenote, .marginnote {
