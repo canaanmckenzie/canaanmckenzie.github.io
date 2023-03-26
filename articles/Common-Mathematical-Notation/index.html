@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+<meta name = "viewport" content="width=device-width, initial-scaled=1.0"/>
+<title>Common Mathematical Notation</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="/assets/images/favicon.ico">
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" />
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Common Mathematical Notation</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Common Mathematical Notation" />
+<meta name="author" content="Canaan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Symbols        Semantics             LaTeX a,b (known) variable or element of a set   c constant, speed of light   e Euler’s number   \(\pi\) constant \(\pi\) \pi i general integer, subscript or superscript, imaginary unit   j,k,l general integer, subscript or superscript   n,m general natural number, total number   p general prime number, general probability   q general prime number   \(\varepsilon\) positive infinitesimal quantitiy \varepsilon x,y (unknown) variable or element of a set; coordinate   z,w general complex number; coordinate   \(\vert x \vert, \vert y \vert\) absolute value \vert \(\bar{z}\) complex conjugate \bar{z} \(\Re{z}\) real part \Re{z} \(\Im{z}\) imaginary part \Im{z} \(\mathcal{T}\) topological space \mathcal{T} A,B (known) set, event   X,Y (uknown) set, random variable   \(\mathcal{X}\),\(\mathcal{Y}\) set of special structure, space \mathcal{X} S,\(\Omega\) class of sets, sample space \Omega U universal set   \(A^\complement\),\(\complement _uA\),\(\bar A\) complement of set A^\complement, \complement _uA, \bar A \(\varnothing\) empty set \varnothing \(\mathcal{P}(S)\),\(2^S\) power set \mathcal{P}(S) \(\in\) is member of \in \(\notin\) is not a member of \notin \(\ni\) owns (has member) \ni \(\subset\) is a proper subset of \subset \(\subseteq\) is a subset of \subseteq \(\supset\) is a proper superset of \supset \(\supseteq\) is a superset of \supseteq \(\cup\) set union \cup \(\cap\) set interseection \cap \(\mathbb{N}\) set of natural numbers \mathbb{N} \(\mathbb{Z}\) set of integers \mathbb{Z} \(\mathbb{Z}^+\) set of positive numbers \mathbb{Z}^+ \(\mathbb{R}\) set of real numbers \mathbb{R} \(\mathbb{R}^n\) n-dimensional real coordinate space \mathbb{R}^n \(\mathbb{C}\) set of complex numbers \mathbb{C} \(\mathbb{C}^n\) n-dimensional complex coordinate space \mathbb{C}^n \(\mathbf{A}\),\(\mathbf{B}\),\(\mathbf{X}\),\(\mathbf{Y}\) matrix \mathbf{A} \(\boldsymbol{a}\),\(\boldsymbol{b}\),\(\boldsymbol{x}\),\(\boldsymbol{y}\) vector \boldsymbol{a} \(\boldsymbol{e}\),\(\boldsymbol{i}\),\(\boldsymbol{j}\),\(\boldsymbol{k}\) unit vector \boldsymbol{e} \(\lambda\) eigenvalue \lambda \(\boldsymbol{v}\) eigenvector   \(\vert\vert a \vert\vert \),\(\vert\vert A \vert\vert\) norm   (a,b) inner product of vectors   \(I _n\) identity matrix of size n   diag\((a _1,…,a _n)\) diagnol matrix of size n   \(\delta_{ij} = \begin{cases} 1, &amp; \text{if }i=j \\ 0,&amp; \text{if } i\neq j \end{cases}\) Kronecker delta \delta_{ij} = \begin{cases} 1, &amp; \\ \text{if }i=j 0,&amp; \text{if } i\neq j \end{cases} \(\mathbf{A}^{\rm T}\) transpose of matrix \mathbf{A}^{\rm T} \(\mathbf{A}^{-1}\) inverse of matrix \mathbf{A}^{-1} rank\((\mathbf{A})\) rank of matrix   det\((\mathbf{A})\) determinant of matrix \det(\mathbf{A}) f,g,h function or mapping   \(\varphi\) function or mapping with special property \varphi \(\delta\) Dirac delta function \delta \(\eta\) Dedekind eta function \eta \(\psi\),\(\Psi\) wave function \psi,\Psi \(\wp\) Weierstrass’s elliptic function \wp negl(x) negligible function   min(S) minimum   max(S) maximum   sup(S) supremum   inf(S) infimum   \(\lim(f(x))\),\(\lim(a_n)\) limit \lim(f(x)) dx differential   \(\partial{x}\) partial differential \partial{x} \(\Delta\) Laplace operator, forward difference \Delta \(\nabla\) gradient, backward difference \nabla \(e^x\),exp(x) exponential function   \(\ln{x}\) natural logarithm \ln{x} \(\log{x}\) logarithm \log{x} \(\mathcal{A}\) algorithm \mathcal{A} \(\mathcal{O}(f(n))\) big-O notation \mathcal{O}(f(n)) \(\Omega(f(n))\) big-Omega notation \Omega(f(n)) \(\Theta(f(n))\) big-Theta notation \Theta(f(n)) \(p_X(x)\) probabily mass function \p_X(x) \(\Pr[X=x]\) probability measure \Pr[X=x] \(\operatorname{E}[X]\) expectation \operatorname{E}[X] \(\operatorname{Cov}(X,Y)\) covariance \operatorname{Cov}(X,Y) \(\operatorname{Var}(X)\) variance \operatorname{Var}(X) \(\sigma\) standard deviation \sigma s (unbiased) sample standard deviation   \(\bar{X}\) sample mean \bar{X} X\(\sim\)Pois(\(\lambda\)) random variable that satifies a probability distribution X \sim Pois \lambda" />
+<meta property="og:description" content="Symbols        Semantics             LaTeX a,b (known) variable or element of a set   c constant, speed of light   e Euler’s number   \(\pi\) constant \(\pi\) \pi i general integer, subscript or superscript, imaginary unit   j,k,l general integer, subscript or superscript   n,m general natural number, total number   p general prime number, general probability   q general prime number   \(\varepsilon\) positive infinitesimal quantitiy \varepsilon x,y (unknown) variable or element of a set; coordinate   z,w general complex number; coordinate   \(\vert x \vert, \vert y \vert\) absolute value \vert \(\bar{z}\) complex conjugate \bar{z} \(\Re{z}\) real part \Re{z} \(\Im{z}\) imaginary part \Im{z} \(\mathcal{T}\) topological space \mathcal{T} A,B (known) set, event   X,Y (uknown) set, random variable   \(\mathcal{X}\),\(\mathcal{Y}\) set of special structure, space \mathcal{X} S,\(\Omega\) class of sets, sample space \Omega U universal set   \(A^\complement\),\(\complement _uA\),\(\bar A\) complement of set A^\complement, \complement _uA, \bar A \(\varnothing\) empty set \varnothing \(\mathcal{P}(S)\),\(2^S\) power set \mathcal{P}(S) \(\in\) is member of \in \(\notin\) is not a member of \notin \(\ni\) owns (has member) \ni \(\subset\) is a proper subset of \subset \(\subseteq\) is a subset of \subseteq \(\supset\) is a proper superset of \supset \(\supseteq\) is a superset of \supseteq \(\cup\) set union \cup \(\cap\) set interseection \cap \(\mathbb{N}\) set of natural numbers \mathbb{N} \(\mathbb{Z}\) set of integers \mathbb{Z} \(\mathbb{Z}^+\) set of positive numbers \mathbb{Z}^+ \(\mathbb{R}\) set of real numbers \mathbb{R} \(\mathbb{R}^n\) n-dimensional real coordinate space \mathbb{R}^n \(\mathbb{C}\) set of complex numbers \mathbb{C} \(\mathbb{C}^n\) n-dimensional complex coordinate space \mathbb{C}^n \(\mathbf{A}\),\(\mathbf{B}\),\(\mathbf{X}\),\(\mathbf{Y}\) matrix \mathbf{A} \(\boldsymbol{a}\),\(\boldsymbol{b}\),\(\boldsymbol{x}\),\(\boldsymbol{y}\) vector \boldsymbol{a} \(\boldsymbol{e}\),\(\boldsymbol{i}\),\(\boldsymbol{j}\),\(\boldsymbol{k}\) unit vector \boldsymbol{e} \(\lambda\) eigenvalue \lambda \(\boldsymbol{v}\) eigenvector   \(\vert\vert a \vert\vert \),\(\vert\vert A \vert\vert\) norm   (a,b) inner product of vectors   \(I _n\) identity matrix of size n   diag\((a _1,…,a _n)\) diagnol matrix of size n   \(\delta_{ij} = \begin{cases} 1, &amp; \text{if }i=j \\ 0,&amp; \text{if } i\neq j \end{cases}\) Kronecker delta \delta_{ij} = \begin{cases} 1, &amp; \\ \text{if }i=j 0,&amp; \text{if } i\neq j \end{cases} \(\mathbf{A}^{\rm T}\) transpose of matrix \mathbf{A}^{\rm T} \(\mathbf{A}^{-1}\) inverse of matrix \mathbf{A}^{-1} rank\((\mathbf{A})\) rank of matrix   det\((\mathbf{A})\) determinant of matrix \det(\mathbf{A}) f,g,h function or mapping   \(\varphi\) function or mapping with special property \varphi \(\delta\) Dirac delta function \delta \(\eta\) Dedekind eta function \eta \(\psi\),\(\Psi\) wave function \psi,\Psi \(\wp\) Weierstrass’s elliptic function \wp negl(x) negligible function   min(S) minimum   max(S) maximum   sup(S) supremum   inf(S) infimum   \(\lim(f(x))\),\(\lim(a_n)\) limit \lim(f(x)) dx differential   \(\partial{x}\) partial differential \partial{x} \(\Delta\) Laplace operator, forward difference \Delta \(\nabla\) gradient, backward difference \nabla \(e^x\),exp(x) exponential function   \(\ln{x}\) natural logarithm \ln{x} \(\log{x}\) logarithm \log{x} \(\mathcal{A}\) algorithm \mathcal{A} \(\mathcal{O}(f(n))\) big-O notation \mathcal{O}(f(n)) \(\Omega(f(n))\) big-Omega notation \Omega(f(n)) \(\Theta(f(n))\) big-Theta notation \Theta(f(n)) \(p_X(x)\) probabily mass function \p_X(x) \(\Pr[X=x]\) probability measure \Pr[X=x] \(\operatorname{E}[X]\) expectation \operatorname{E}[X] \(\operatorname{Cov}(X,Y)\) covariance \operatorname{Cov}(X,Y) \(\operatorname{Var}(X)\) variance \operatorname{Var}(X) \(\sigma\) standard deviation \sigma s (unbiased) sample standard deviation   \(\bar{X}\) sample mean \bar{X} X\(\sim\)Pois(\(\lambda\)) random variable that satifies a probability distribution X \sim Pois \lambda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-08-01T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Common Mathematical Notation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Canaan"},"dateModified":"2014-08-01T00:00:00-04:00","datePublished":"2014-08-01T00:00:00-04:00","description":"Symbols        Semantics             LaTeX a,b (known) variable or element of a set   c constant, speed of light   e Euler’s number   \\(\\pi\\) constant \\(\\pi\\) \\pi i general integer, subscript or superscript, imaginary unit   j,k,l general integer, subscript or superscript   n,m general natural number, total number   p general prime number, general probability   q general prime number   \\(\\varepsilon\\) positive infinitesimal quantitiy \\varepsilon x,y (unknown) variable or element of a set; coordinate   z,w general complex number; coordinate   \\(\\vert x \\vert, \\vert y \\vert\\) absolute value \\vert \\(\\bar{z}\\) complex conjugate \\bar{z} \\(\\Re{z}\\) real part \\Re{z} \\(\\Im{z}\\) imaginary part \\Im{z} \\(\\mathcal{T}\\) topological space \\mathcal{T} A,B (known) set, event   X,Y (uknown) set, random variable   \\(\\mathcal{X}\\),\\(\\mathcal{Y}\\) set of special structure, space \\mathcal{X} S,\\(\\Omega\\) class of sets, sample space \\Omega U universal set   \\(A^\\complement\\),\\(\\complement _uA\\),\\(\\bar A\\) complement of set A^\\complement, \\complement _uA, \\bar A \\(\\varnothing\\) empty set \\varnothing \\(\\mathcal{P}(S)\\),\\(2^S\\) power set \\mathcal{P}(S) \\(\\in\\) is member of \\in \\(\\notin\\) is not a member of \\notin \\(\\ni\\) owns (has member) \\ni \\(\\subset\\) is a proper subset of \\subset \\(\\subseteq\\) is a subset of \\subseteq \\(\\supset\\) is a proper superset of \\supset \\(\\supseteq\\) is a superset of \\supseteq \\(\\cup\\) set union \\cup \\(\\cap\\) set interseection \\cap \\(\\mathbb{N}\\) set of natural numbers \\mathbb{N} \\(\\mathbb{Z}\\) set of integers \\mathbb{Z} \\(\\mathbb{Z}^+\\) set of positive numbers \\mathbb{Z}^+ \\(\\mathbb{R}\\) set of real numbers \\mathbb{R} \\(\\mathbb{R}^n\\) n-dimensional real coordinate space \\mathbb{R}^n \\(\\mathbb{C}\\) set of complex numbers \\mathbb{C} \\(\\mathbb{C}^n\\) n-dimensional complex coordinate space \\mathbb{C}^n \\(\\mathbf{A}\\),\\(\\mathbf{B}\\),\\(\\mathbf{X}\\),\\(\\mathbf{Y}\\) matrix \\mathbf{A} \\(\\boldsymbol{a}\\),\\(\\boldsymbol{b}\\),\\(\\boldsymbol{x}\\),\\(\\boldsymbol{y}\\) vector \\boldsymbol{a} \\(\\boldsymbol{e}\\),\\(\\boldsymbol{i}\\),\\(\\boldsymbol{j}\\),\\(\\boldsymbol{k}\\) unit vector \\boldsymbol{e} \\(\\lambda\\) eigenvalue \\lambda \\(\\boldsymbol{v}\\) eigenvector   \\(\\vert\\vert a \\vert\\vert \\),\\(\\vert\\vert A \\vert\\vert\\) norm   (a,b) inner product of vectors   \\(I _n\\) identity matrix of size n   diag\\((a _1,…,a _n)\\) diagnol matrix of size n   \\(\\delta_{ij} = \\begin{cases} 1, &amp; \\text{if }i=j \\\\ 0,&amp; \\text{if } i\\neq j \\end{cases}\\) Kronecker delta \\delta_{ij} = \\begin{cases} 1, &amp; \\\\ \\text{if }i=j 0,&amp; \\text{if } i\\neq j \\end{cases} \\(\\mathbf{A}^{\\rm T}\\) transpose of matrix \\mathbf{A}^{\\rm T} \\(\\mathbf{A}^{-1}\\) inverse of matrix \\mathbf{A}^{-1} rank\\((\\mathbf{A})\\) rank of matrix   det\\((\\mathbf{A})\\) determinant of matrix \\det(\\mathbf{A}) f,g,h function or mapping   \\(\\varphi\\) function or mapping with special property \\varphi \\(\\delta\\) Dirac delta function \\delta \\(\\eta\\) Dedekind eta function \\eta \\(\\psi\\),\\(\\Psi\\) wave function \\psi,\\Psi \\(\\wp\\) Weierstrass’s elliptic function \\wp negl(x) negligible function   min(S) minimum   max(S) maximum   sup(S) supremum   inf(S) infimum   \\(\\lim(f(x))\\),\\(\\lim(a_n)\\) limit \\lim(f(x)) dx differential   \\(\\partial{x}\\) partial differential \\partial{x} \\(\\Delta\\) Laplace operator, forward difference \\Delta \\(\\nabla\\) gradient, backward difference \\nabla \\(e^x\\),exp(x) exponential function   \\(\\ln{x}\\) natural logarithm \\ln{x} \\(\\log{x}\\) logarithm \\log{x} \\(\\mathcal{A}\\) algorithm \\mathcal{A} \\(\\mathcal{O}(f(n))\\) big-O notation \\mathcal{O}(f(n)) \\(\\Omega(f(n))\\) big-Omega notation \\Omega(f(n)) \\(\\Theta(f(n))\\) big-Theta notation \\Theta(f(n)) \\(p_X(x)\\) probabily mass function \\p_X(x) \\(\\Pr[X=x]\\) probability measure \\Pr[X=x] \\(\\operatorname{E}[X]\\) expectation \\operatorname{E}[X] \\(\\operatorname{Cov}(X,Y)\\) covariance \\operatorname{Cov}(X,Y) \\(\\operatorname{Var}(X)\\) variance \\operatorname{Var}(X) \\(\\sigma\\) standard deviation \\sigma s (unbiased) sample standard deviation   \\(\\bar{X}\\) sample mean \\bar{X} X\\(\\sim\\)Pois(\\(\\lambda\\)) random variable that satifies a probability distribution X \\sim Pois \\lambda","headline":"Common Mathematical Notation","mainEntityOfPage":{"@type":"WebPage","@id":"/articles/Common-Mathematical-Notation/"},"url":"/articles/Common-Mathematical-Notation/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" async src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+</head>
+  <body class="full-width">
+    <header>
+    <nav class= "group">
+        <a href="/"><img class="badge" src="/assets/img/ghosty.png" alt="CM"></a>
+        <a href="/">Home</a>
+        <a href="/about">about</a>
+    </nav>
+</header>
+    <article>
+      <h1>Common Mathematical Notation</h1>
+<p class="subtitle">August 1, 2014</p>
+
+
+<table class="tablelines">
+  <thead>
+    <tr>
+      <th>Symbols       </th>
+      <th style="text-align: left">Semantics            </th>
+      <th style="text-align: left">LaTeX</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>a,b</em></td>
+      <td style="text-align: left">(known) variable or element of a set</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>c</em></td>
+      <td style="text-align: left">constant, speed of light</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>e</em></td>
+      <td style="text-align: left">Euler’s number</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\pi\)</em></td>
+      <td style="text-align: left">constant \(\pi\)</td>
+      <td style="text-align: left">\pi</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>i</em></td>
+      <td style="text-align: left">general integer, subscript or superscript, imaginary unit</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>j,k,l</em></td>
+      <td style="text-align: left">general integer, subscript or superscript</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>n,m</em></td>
+      <td style="text-align: left">general natural number, total number</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>p</em></td>
+      <td style="text-align: left">general prime number, general probability</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>q</em></td>
+      <td style="text-align: left">general prime number</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\varepsilon\)</em></td>
+      <td style="text-align: left">positive infinitesimal quantitiy</td>
+      <td style="text-align: left">\varepsilon</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>x,y</em></td>
+      <td style="text-align: left">(unknown) variable or element of a set; coordinate</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>z,w</em></td>
+      <td style="text-align: left">general complex number; coordinate</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\vert x \vert, \vert y \vert\)</em></td>
+      <td style="text-align: left">absolute value</td>
+      <td style="text-align: left">\vert</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\bar{z}\)</em></td>
+      <td style="text-align: left">complex conjugate</td>
+      <td style="text-align: left">\bar{z}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\Re{z}\)</em></td>
+      <td style="text-align: left">real part</td>
+      <td style="text-align: left">\Re{z}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\Im{z}\)</em></td>
+      <td style="text-align: left">imaginary part</td>
+      <td style="text-align: left">\Im{z}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathcal{T}\)</em></td>
+      <td style="text-align: left">topological space</td>
+      <td style="text-align: left">\mathcal{T}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>A,B</em></td>
+      <td style="text-align: left">(known) set, event</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>X,Y</em></td>
+      <td style="text-align: left">(uknown) set, random variable</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathcal{X}\),\(\mathcal{Y}\)</em></td>
+      <td style="text-align: left">set of special structure, space</td>
+      <td style="text-align: left">\mathcal{X}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>S,\(\Omega\)</em></td>
+      <td style="text-align: left">class of sets, sample space</td>
+      <td style="text-align: left">\Omega</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>U</em></td>
+      <td style="text-align: left">universal set</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(A^\complement\),\(\complement _uA\),\(\bar A\)</em></td>
+      <td style="text-align: left">complement of set</td>
+      <td style="text-align: left">A^\complement, \complement _uA, \bar A</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\varnothing\)</em></td>
+      <td style="text-align: left">empty set</td>
+      <td style="text-align: left">\varnothing</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathcal{P}(S)\),\(2^S\)</em></td>
+      <td style="text-align: left">power set</td>
+      <td style="text-align: left">\mathcal{P}(S)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\in\)</em></td>
+      <td style="text-align: left">is member of</td>
+      <td style="text-align: left">\in</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\notin\)</em></td>
+      <td style="text-align: left">is not a member of</td>
+      <td style="text-align: left">\notin</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\ni\)</em></td>
+      <td style="text-align: left">owns (has member)</td>
+      <td style="text-align: left">\ni</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\subset\)</em></td>
+      <td style="text-align: left">is a proper subset of</td>
+      <td style="text-align: left">\subset</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\subseteq\)</em></td>
+      <td style="text-align: left">is a subset of</td>
+      <td style="text-align: left">\subseteq</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\supset\)</em></td>
+      <td style="text-align: left">is a proper superset of</td>
+      <td style="text-align: left">\supset</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\supseteq\)</em></td>
+      <td style="text-align: left">is a superset of</td>
+      <td style="text-align: left">\supseteq</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\cup\)</em></td>
+      <td style="text-align: left">set union</td>
+      <td style="text-align: left">\cup</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\cap\)</em></td>
+      <td style="text-align: left">set interseection</td>
+      <td style="text-align: left">\cap</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{N}\)</em></td>
+      <td style="text-align: left">set of natural numbers</td>
+      <td style="text-align: left">\mathbb{N}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{Z}\)</em></td>
+      <td style="text-align: left">set of integers</td>
+      <td style="text-align: left">\mathbb{Z}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{Z}^+\)</em></td>
+      <td style="text-align: left">set of positive numbers</td>
+      <td style="text-align: left">\mathbb{Z}^+</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{R}\)</em></td>
+      <td style="text-align: left">set of real numbers</td>
+      <td style="text-align: left">\mathbb{R}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{R}^n\)</em></td>
+      <td style="text-align: left"><em>n</em>-dimensional real coordinate space</td>
+      <td style="text-align: left">\mathbb{R}^n</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{C}\)</em></td>
+      <td style="text-align: left">set of complex numbers</td>
+      <td style="text-align: left">\mathbb{C}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbb{C}^n\)</em></td>
+      <td style="text-align: left"><em>n</em>-dimensional complex coordinate space</td>
+      <td style="text-align: left">\mathbb{C}^n</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbf{A}\),\(\mathbf{B}\),\(\mathbf{X}\),\(\mathbf{Y}\)</em></td>
+      <td style="text-align: left">matrix</td>
+      <td style="text-align: left">\mathbf{A}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\boldsymbol{a}\),\(\boldsymbol{b}\),\(\boldsymbol{x}\),\(\boldsymbol{y}\)</em></td>
+      <td style="text-align: left">vector</td>
+      <td style="text-align: left">\boldsymbol{a}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\boldsymbol{e}\),\(\boldsymbol{i}\),\(\boldsymbol{j}\),\(\boldsymbol{k}\)</em></td>
+      <td style="text-align: left">unit vector</td>
+      <td style="text-align: left">\boldsymbol{e}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\lambda\)</em></td>
+      <td style="text-align: left">eigenvalue</td>
+      <td style="text-align: left">\lambda</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\boldsymbol{v}\)</em></td>
+      <td style="text-align: left">eigenvector</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\vert\vert a \vert\vert \),\(\vert\vert A \vert\vert\)</em></td>
+      <td style="text-align: left">norm</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>(a,b)</em></td>
+      <td style="text-align: left">inner product of vectors</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(I _n\)</em></td>
+      <td style="text-align: left">identity matrix of size <em>n</em></td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>diag<em>\((a _1,…,a _n)\)</em></td>
+      <td style="text-align: left">diagnol matrix of size <em>n</em></td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\delta_{ij} = \begin{cases} 1, &amp; \text{if }i=j \\ 0,&amp; \text{if } i\neq j \end{cases}\)</em></td>
+      <td style="text-align: left">Kronecker delta</td>
+      <td style="text-align: left">\delta_{ij} = \begin{cases} 1, &amp; <code class="language-plaintext highlighter-rouge">\\</code> \text{if }i=j 0,&amp; \text{if } i\neq j \end{cases}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbf{A}^{\rm T}\)</em></td>
+      <td style="text-align: left">transpose of matrix</td>
+      <td style="text-align: left">\mathbf{A}^{\rm T}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\mathbf{A}^{-1}\)</em></td>
+      <td style="text-align: left">inverse of matrix</td>
+      <td style="text-align: left">\mathbf{A}^{-1}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>rank<em>\((\mathbf{A})\)</em></td>
+      <td style="text-align: left">rank of matrix</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>det<em>\((\mathbf{A})\)</em></td>
+      <td style="text-align: left">determinant of matrix</td>
+      <td style="text-align: left">\det(\mathbf{A})</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>f,g,h</em></td>
+      <td style="text-align: left">function or mapping</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\varphi\)</em></td>
+      <td style="text-align: left">function or mapping with special property</td>
+      <td style="text-align: left">\varphi</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\delta\)</em></td>
+      <td style="text-align: left">Dirac delta function</td>
+      <td style="text-align: left">\delta</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\eta\)</em></td>
+      <td style="text-align: left">Dedekind eta function</td>
+      <td style="text-align: left">\eta</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\psi\),\(\Psi\)</em></td>
+      <td style="text-align: left">wave function</td>
+      <td style="text-align: left">\psi,\Psi</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(\wp\)</em></td>
+      <td style="text-align: left">Weierstrass’s elliptic function</td>
+      <td style="text-align: left">\wp</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>negl(<em>x</em>)</td>
+      <td style="text-align: left">negligible function</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>min(<em>S</em>)</td>
+      <td style="text-align: left">minimum</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>max(<em>S</em>)</td>
+      <td style="text-align: left">maximum</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>sup(<em>S</em>)</td>
+      <td style="text-align: left">supremum</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>inf(<em>S</em>)</td>
+      <td style="text-align: left">infimum</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\lim(f(x))\),\(\lim(a_n)\)</td>
+      <td style="text-align: left">limit</td>
+      <td style="text-align: left">\lim(f(x))</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>dx</em></td>
+      <td style="text-align: left">differential</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\partial{x}\)</td>
+      <td style="text-align: left">partial differential</td>
+      <td style="text-align: left">\partial{x}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\Delta\)</td>
+      <td style="text-align: left">Laplace operator, forward difference</td>
+      <td style="text-align: left">\Delta</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\nabla\)</td>
+      <td style="text-align: left">gradient, backward difference</td>
+      <td style="text-align: left">\nabla</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>\(e^x\)</em>,exp(<em>x</em>)</td>
+      <td style="text-align: left">exponential function</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\ln{x}\)</td>
+      <td style="text-align: left">natural logarithm</td>
+      <td style="text-align: left">\ln{x}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\log{x}\)</td>
+      <td style="text-align: left">logarithm</td>
+      <td style="text-align: left">\log{x}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\mathcal{A}\)</td>
+      <td style="text-align: left">algorithm</td>
+      <td style="text-align: left">\mathcal{A}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\mathcal{O}(f(n))\)</td>
+      <td style="text-align: left">big-O notation</td>
+      <td style="text-align: left">\mathcal{O}(f(n))</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\Omega(f(n))\)</td>
+      <td style="text-align: left">big-Omega notation</td>
+      <td style="text-align: left">\Omega(f(n))</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\Theta(f(n))\)</td>
+      <td style="text-align: left">big-Theta notation</td>
+      <td style="text-align: left">\Theta(f(n))</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(p_X(x)\)</td>
+      <td style="text-align: left">probabily mass function</td>
+      <td style="text-align: left">\p_X(x)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\Pr[X=x]\)</td>
+      <td style="text-align: left">probability measure</td>
+      <td style="text-align: left">\Pr[X=x]</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\operatorname{E}[X]\)</td>
+      <td style="text-align: left">expectation</td>
+      <td style="text-align: left">\operatorname{E}[X]</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\operatorname{Cov}(X,Y)\)</td>
+      <td style="text-align: left">covariance</td>
+      <td style="text-align: left">\operatorname{Cov}(X,Y)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\operatorname{Var}(X)\)</td>
+      <td style="text-align: left">variance</td>
+      <td style="text-align: left">\operatorname{Var}(X)</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\sigma\)</td>
+      <td style="text-align: left">standard deviation</td>
+      <td style="text-align: left">\sigma</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><em>s</em></td>
+      <td style="text-align: left">(unbiased) sample standard deviation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>\(\bar{X}\)</td>
+      <td style="text-align: left">sample mean</td>
+      <td style="text-align: left">\bar{X}</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>X\(\sim\)Pois(\(\lambda\))</td>
+      <td style="text-align: left">random variable that satifies a probability distribution</td>
+      <td style="text-align: left">X \sim Pois \lambda</td>
+    </tr>
+  </tbody>
+</table>
+
+    </article>
+    <div class="footer">
+    <span>&copy 2014-2023 Canaan McKenzie. <a href="/feed.xml">Subscribe</a> via RSS</span>
+</div>
+  </body>
+</html>
