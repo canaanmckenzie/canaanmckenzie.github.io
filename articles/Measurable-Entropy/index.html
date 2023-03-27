@@ -42,10 +42,11 @@
 <p>A brief introduction to basic information theory (entropy/information as a measure for theoretical unpredictability of data) and descriptive statistics (central tendency, dispersian, and shape). The maximilization of entropy under different constraints yields some common probability distributions: uniform distribution (given no prior knowledge); normal distribution (given that mean and variance are known).</p>
 
 <p>Shannon entropy:</p>
-
-\[\begin{equation} 
+<div class="mathblock"><script type="math/tex; mode=display">
+\begin{equation} 
 H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i)
-\end{equation}\]
+\end{equation}
+</script></div>
 
 <p>implemented here</p>
 <div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">import</span> <span class="nn">Data.List</span> <span class="p">(</span><span class="nf">group</span><span class="p">,</span> <span class="nf">sort</span><span class="p">)</span>
