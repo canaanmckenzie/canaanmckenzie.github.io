@@ -8,6 +8,35 @@
     font-style: normal;
 }
 
+/* Style rules for dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: black;
+      color: #f9f6ee;
+    }
+      p,ul,ol {
+        margin-bottom: 0.5em;
+        color: #f9f6ee;
+    }
+    pre, code {
+        background:black;
+    }
+    
+  }
+  /* Style rules for light mode */
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color:white;
+      color: black;
+    }
+    p,ul,ol {
+        margin-bottom: 0.5em;
+        color:  black;
+    }
+    pre, code {
+        background:white;
+    }
+  }
 html {
     max-width: 90ch;
     padding: 1em;
@@ -21,11 +50,6 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0.02em 0 0.02em;
 }
   
-p,ul,ol {
-    margin-bottom: 0.5em;
-    color:  #1d1d1d;
-}
-
 .post-meta {
     text-align: right;
 }
@@ -51,9 +75,6 @@ pre {
     padding: 1rem;
 }
 
-pre, code {
-    background: white;
-}
 
 table { width: 100%; }
 
