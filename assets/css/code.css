@@ -1,8 +1,3 @@
-/**
- * GHColors theme by Avi Aryan (http://aviaryan.in)
- * Inspired by Github syntax coloring
- */
-
  code[class*="language-"],
  pre[class*="language-"] {
      color: #393A34;
