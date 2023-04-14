@@ -89,7 +89,7 @@ table, th, td {
 }
 a {
     text-decoration: none;
-    color:#ffb7c5 
+    color:firebrick;
 }
 a :visited {
     color: gray;
