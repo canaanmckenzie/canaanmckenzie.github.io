@@ -7,9 +7,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
-    font-family: 'Artisan12';
-    src: url('../fonts/artisan12.otf') format('opentype');
+    font-family: 'FiraCode';
+    src: url('../fonts/FiraCode-Regular.woff2') format('woff2'),
+         url('../fonts/FiraCode-Bold.woff2') format('woff2');
 }
 
 /* Style rules for dark mode */
@@ -47,7 +49,7 @@ html {
     margin: auto;
     line-height: 1.75;
     font-size: 1.4em;
-    font-family: 'Artisan12';
+    font-family: 'FiraCode';
 }
 
 h1,h2,h3,h4,h5,h6 {
