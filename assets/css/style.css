@@ -23,7 +23,7 @@
 /* Style rules for dark mode */
 @media (prefers-color-scheme: dark) {
     body {
-      background-color: black;
+      background-color: #010101;;
       color: #f9f6ee;
     }
       p,ul,ol {
@@ -31,7 +31,7 @@
         color: #f9f6ee;
     }
     pre, code {
-        background:black;
+        background:#010101;
     }
     
   }
@@ -39,11 +39,11 @@
   @media (prefers-color-scheme: light) {
     body {
       background-color:white;
-      color: black;
+      color: #010101;
     }
     p,ul,ol {
         margin-bottom: 0.5em;
-        color:  black;
+        color:  #010101;
     }
     pre, code {
         background:white;
@@ -91,7 +91,7 @@ pre {
 table { width: 100%; }
 
 table, th, td {
-  border: thin solid black;
+  border: thin solid #010101;
   border-collapse: collapse;
   padding: 0.4rem;
 }
@@ -101,7 +101,7 @@ table, th, td {
 }
 a {
     text-decoration: none;
-    color: #66023C;
+    color: #2BDA40;
 }
 a :visited {
     color: gray;
