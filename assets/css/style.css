@@ -14,6 +14,12 @@
          url('../fonts/FiraCode-Bold.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Courier-New';
+    src: url('../fonts/courier-new-webfont.woff') format('woff');
+         
+}
+
 /* Style rules for dark mode */
 @media (prefers-color-scheme: dark) {
     body {
@@ -49,7 +55,7 @@ html {
     margin: auto;
     line-height: 1.75;
     font-size: 1.4em;
-    font-family: 'FiraCode';
+    font-family: 'Courier-New';
 }
 
 h1,h2,h3,h4,h5,h6 {
