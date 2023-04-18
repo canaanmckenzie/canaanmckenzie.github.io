@@ -95,7 +95,7 @@ table, th, td {
 }
 a {
     text-decoration: none;
-    color:firebrick;
+    color:#2BDA40;
 }
 a :visited {
     color: gray;
