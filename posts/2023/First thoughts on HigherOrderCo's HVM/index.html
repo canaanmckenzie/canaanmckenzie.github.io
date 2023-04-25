@@ -14,14 +14,14 @@
             <a href="/">~/</a> | <a href="/feed.xml">rss</a>
         </div>
         <h1>First thoughts on High-order Virtual Machines</h1>
-<p>
-    2023 03 02 </br>
+<div>
+    2023 03 02 
     
     <a href="/tags/lambda-calculus">#lambda calculus</a>
     
     <a href="/tags/rust">#rust</a>
     
-</p>
+</div>
 <p>Well I've been looking atHVM architecture again after I first noticed it a year ago. At a high-level it provides an interesting paradigm of computation based on modifying lambda calculus to match part of <a href="https://dl.acm.org/doi/10.1145/96709.96711">Lamping's optimal reduction algorithm</a>, inspired by this <a href="https://www.sciencedirect.com/science/article/pii/S0890540197926432?ref=pdf_download&amp;fr=RR-2&amp;rr=7af8a9dc7dcb3ba6">paper</a> and an adoption of previously well documented optimal evaluations in functional programming. <em>The Optimal Implementation of Functional Programming Languages (Cambridge Tracts in Theoretical Computer Science, Series Number 45)</em> describes a &quot;reduction machine&quot; pages 14-39 which this emulates.</p>
 <p>I'll add to this and probably more blog posts as I go through the early stages, but I thought I would write something down for now, I'll be breaking down the papers/models more in depth, and maybe glean some insight in how they can be optimized. (Spoiler, I have a fairly fast machine, and the example sequential function provided on the <a href="https://github.com/HigherOrderCO/HVM/blob/master/guide/README.md">Github Overview</a> ran 5x slower than as purported in the readme. based on the hvm built in timer and my own batch file measuring program run time). Although I take the point that measuring the &quot;cost&quot; is valuable because it is machine agnostic, however, I think this opens the door for some investigation into making it more efficient depending on the hardware.</p>
 <p>I've added the batch file below (although you'll notice the times differ slightly on the hvm timer vs mine, but the code is still useful) if anyone wants some open source code to time operations on their windows machine have at it. Add it to your path and run <code>timecmd</code> or whatever you call it in your terminal.</p>
