@@ -19,43 +19,25 @@
     src: url('../fonts/courier-new-webfont.woff') format('woff');
          
 }
-
-/* Style rules for dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-      background-color: #010101;;
-      color: #f9f6ee;
-    }
-   ul,ol {
+body {
+      background-color: white;
+      color: black;
+}
+p, ul,ol {
         margin-bottom: 0.5em;
-        color: #f9f6ee;
+        color: black;
     }
-    pre, code {
-        background:#010101;
-    }
-    
-  }
-  /* Style rules for light mode */
-  @media (prefers-color-scheme: light) {
-    body {
-      background-color:white;
-      color: #010101;
-    }
-    p,ul,ol {
-        margin-bottom: 0.5em;
-        color:  #010101;
-    }
-    pre, code {
+pre, code {
         background:white;
     }
-  }
+    
 html {
     max-width: 90ch;
     padding: 1em;
     margin: auto;
     line-height: 1.75;
     font-size: 1.4em;
-    font-family: 'Courier-New';
+    font-family: 'Menlo';
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -101,7 +83,7 @@ table, th, td {
 }
 a {
     text-decoration: none;
-    color: #e2b13c;/*#d4af37;#0ff0ff; #2BDA40;*/
+    color: black;
 }
 a :visited {
     color: gray;
