@@ -50,7 +50,7 @@
     }
   }
 html {
-    max-width: 75ch;
+    max-width: 90ch;
     padding: 1em;
     margin: auto;
     line-height: 1.75;
@@ -109,4 +109,7 @@ a :visited {
 .date {
     font-size: 0.5em;
     margin-top: 0px;
+}
+.post {
+    margin-bottom: 0.5em;
 }
