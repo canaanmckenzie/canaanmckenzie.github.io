@@ -1,14 +1,16 @@
-/* Sakura.css v1.5.0
- * ================
- * Minimal css theme.
- * Project: https://github.com/oxalorg/sakura/
- */
+
 /* Body */
+
+@font-face {
+font-family:'JetBrains-Mono';
+src: url('../JetBrainsMono-Regular.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
 html {
   font-size: 62.5%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: 'JetBrains-Mono', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
-
 body {
   font-size: 1.8rem;
   line-height: 1.618;
@@ -31,7 +33,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: 'JetBrains-Mono', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   font-weight: 700;
   /*margin-top: 3rem*/
   margin-bottom: 1.5rem;
@@ -42,11 +44,17 @@ h1, h2, h3, h4, h5, h6 {
   /*margin: 2em 0em 1em;*/
 }
 
+div#devlog {
+  margin-top: 4.5em;
+}
+div#links {
+   margin-top: 1.5em;
+}
 li#sections {
    margin-top: 1em;
 }
 h1 {
-  font-size: 2.35em;
+  font-size: 1.5em;
   margin: 2em 0em 1em;
 }
 
@@ -86,11 +94,15 @@ hr {
 
 a {
   /*text-decoration: none;*/
-  color: #0000ff;
+  color: #000000;
  /* color: #1d7484;*/ 
 }
+a:hover{
+  text-decoration-color:#42f5a1;
+  text-decoration-thickness: 0.1em;
+}
 a:visited {
-  color: #800080;/* #144f5a;*/
+  color: #000000;/* #144f5a;*/
 }
 /* removed to remove double hover, can put back for added flair later
 a:hover {
@@ -103,19 +115,21 @@ ul#blog-index{
     display:block;
 }
 ul {
+  list-style-type: none;
   padding-left: 1.4em;
   margin-top: 0px;
   margin-bottom: 2.5rem;
   margin-left: 1em;
 }
 div#topline {
-  border-bottom: 2px solid black;
+  /*border-bottom: 2px solid black;*/
 }
 div#blog-index{
   margin-left: 1.4em;
 }
 li {
   /*margin-bottom: 0.4em;*/
+  list-style-type: none;
 }
 
 blockquote {
