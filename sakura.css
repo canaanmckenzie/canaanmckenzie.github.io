@@ -19,6 +19,7 @@ body {
   /*color: #4a4a4a;   changed color to dark black*/
   background-color: #f9f9f9;
   padding: 13px;
+  color: #383838;
 }
 
 @media (max-width: 684px) {
@@ -94,7 +95,6 @@ hr {
 
 a {
   /*text-decoration: none;*/
-  color: #000000;
  /* color: #1d7484;*/ 
 }
 a:hover{
@@ -102,7 +102,7 @@ a:hover{
   text-decoration-thickness: 0.1em;
 }
 a:visited {
-  color: #000000;/* #144f5a;*/
+  color:#383838;
 }
 /* removed to remove double hover, can put back for added flair later
 a:hover {
