@@ -51,6 +51,14 @@ div#devlog {
 div#links {
    margin-top: 1.5em;
 }
+div#links a{
+    color:#35b07b;
+}
+div#links a:hover {
+  text-decoration-color:#35b07b;
+  text-decoration-thickness: 0.1em;
+}
+}
 li#sections {
    margin-top: 1em;
 }
@@ -99,7 +107,7 @@ a {
 
 }
 a:hover{
-  text-decoration-color:#42f5a1;
+  text-decoration-color:#ffb7c5;
   text-decoration-thickness: 0.1em;
 }
 a:visited {
