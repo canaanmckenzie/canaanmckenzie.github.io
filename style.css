@@ -1,0 +1,17 @@
+body {
+    font-family: Iosevka, "Fira Code", "Anonymous Pro", Menlo, monospace;
+    color: #27221f;
+    background-color: f7f1e9;
+    font-weight: 200;
+    margin-left: 15em;
+    margin-right: 15em;
+    margin-top: 4em;
+}
+h1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+h2 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
