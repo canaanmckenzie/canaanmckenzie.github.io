@@ -1,45 +1,52 @@
-<!DOCTYPE html>
 <html>
  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="quantish engineering">
-  <link rel="stylesheet" href="/style.css" type="text/css">
+  <title>Canaan&#39;s weblog</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  
+   <link rel="stylesheet" href="style.css" />
+  
  </head>
+
  <body>
-  <h1>
-   01000011 01100001 01101110 01100001 01100001 01101110
-  </h1>
-  <div class="topnav">
-   <a href="/">Home</a> |
-    <a href="https://github.com/canaanmckenzie">GitHub</a> |
-    <a href="https://mastodon.social/@canaanmckenzie">Mastodon</a>
-  </div>
   <main>
-   <p>
-    Scripter of bits. I approach coding in the same way as I do writing. I imagine a system and then create it with words, numbers, and symbols. Appreciative of both brief functional prose, and projects that are complex, interwoven narratives.
-   </p>
-   <p>
-    Styli: Elixir, Phoenix, Ecto, OCaml, Haskell, JavaScript, PHP, Laravel
-   </p>
-   <div id="devlog">
-    <h2>
-     Writing
-    </h2>
-    <p id="blog-index">
-     <p>
-      2023-10-25 <a href="/recommended-books-on-egyptology">My Recommendations on Learning Hieroglyphics</a>
-     </p>
-     <p>
-      2023-10-24 <a href="/rebuilding-blog-in-soupault">Rebuilding My Blog in Soupault : A Digital Garden</a>
-     </p>
-    </p>
-   </div>
-  </main>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-  <footer>
-   © 2023 Canaan McKenzie
+   <header>
+     <h1>Canaan&#39;s weblog</h1>
+     <nav>
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+    </ul>
+</nav>
+
+   </header>
+  <section id="content">
+      <section id="notes">
+    <h2>Notes</h2>
+    <p>Saturday 23 March 2024
+: Parsing SNMP traffic with Perl. The end goal being that I can move a pfSense firewall on to my RMM platform.</p>
+    
+    <pre><span class="line-number"><span>1</span><span>2</span><span>3</span></span><code>#!usr/bin/perl 
+use v5.38; 
+say "hello, world!";</code>
+</pre>
+
+<p>...just warming up. alright so starting with a basic csv of SNMP traffic (this is some random data i generated.</p>
+<pre><code>Timestamp,Source IP,Destination IP,Community,Request Type,OID,Response
+2024-03-23 08:00:00,192.168.1.100,192.168.1.1,public,GET,1.3.6.1.2.1.1.1.0,"SNMPv2-MIB::sysDescr.0 = STRING: pfSense Firewall"
+2024-03-23 08:01:00,192.168.1.101,192.168.1.1,public,GET,1.3.6.1.2.1.1.3.0,"SNMPv2-MIB::sysUpTime.0 = Timeticks: (123456789) 14 days, 6:56:07.89"
+2024-03-23 08:02:00,192.168.1.102,192.168.1.1,public,GET,1.3.6.1.2.1.2.2.1.10.1,"IF-MIB::ifInOctets.1 = Counter32: 123456789"
+2024-03-23 08:03:00,192.168.1.103,192.168.1.1,public,GET,1.3.6.1.2.1.2.2.1.16.1,"IF-MIB::ifOutOctets.1 = Counter32: 987654321"
+2024-03-23 08:04:00,192.168.1.104,192.168.1.1,public,GET,1.3.6.1.2.1.2.2.1.2.1,"IF-MIB::ifDescr.1 = STRING: WAN Interface"
+2024-03-23 08:05:00,192.168.1.105,192.168.1.1,public,GET,1.3.6.1.2.1.2.2.1.2.2,"IF-MIB::ifDescr.2 = STRING: LAN Interface"
+</code></pre>
+</section>
+
+
+  </section>
+  <footer> 
+    &copy; Canaan McKenzie 2024
   </footer>
+  </main>
  </body>
 </html>
